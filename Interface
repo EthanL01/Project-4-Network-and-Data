@@ -1,0 +1,18 @@
+from Encryption import encrypt_rail_fence
+from Decryption import decrypt_rail_fence
+
+def main():
+    print("Rail Fence Cipher Tool")
+    choice = input("Encrypt or Decrypt? (e/d): ").lower()
+    key = int(input("Enter number of rails (key): "))
+    message = input("Enter the message: ")
+
+    if choice == 'e':
+        result = encrypt_rail_fence(message, key)
+        print("Ciphertext:", result)
+    else:
+        result = decrypt_rail_fence(message, key)
+        print("Plaintext:", result)
+
+if __name__ == "__main__":
+    main()
